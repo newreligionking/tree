@@ -6,27 +6,59 @@
 	"output": {
 		"abi": [
 			{
+				"anonymous": false,
 				"inputs": [
 					{
-						"internalType": "uint256",
-						"name": "x",
-						"type": "uint256"
+						"indexed": true,
+						"internalType": "bytes4",
+						"name": "selector",
+						"type": "bytes4"
 					},
 					{
-						"internalType": "uint256",
-						"name": "y",
-						"type": "uint256"
+						"indexed": true,
+						"internalType": "address",
+						"name": "implementation",
+						"type": "address"
 					}
 				],
-				"name": "mul",
+				"name": "NewLeaf",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes4",
+						"name": "selector",
+						"type": "bytes4"
+					},
+					{
+						"internalType": "address",
+						"name": "_implementation",
+						"type": "address"
+					}
+				],
+				"name": "deploy",
 				"outputs": [
 					{
-						"internalType": "uint256",
-						"name": "z",
-						"type": "uint256"
+						"internalType": "address",
+						"name": "deployed",
+						"type": "address"
 					}
 				],
-				"stateMutability": "pure",
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "implementation",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			}
 		],
@@ -43,7 +75,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"test/Test.sol": "Multiplier"
+			"contracts/Seed.sol": "Seed"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -71,22 +103,6 @@
 			"urls": [
 				"bzz-raw://bdaa111ec992824502edf439503188ff2c6918524010ccf9078ffae50064e8d7",
 				"dweb:/ipfs/QmY9bpeVtJaTGW1rnmCBfd385kRousGaeLX6QfUbehrN59"
-			]
-		},
-		"contracts/Tree.sol": {
-			"keccak256": "0x51a34e7f8a865f01b92159b6842c0d6a10bbd984c77af53c5c618465459b0915",
-			"license": "MIT",
-			"urls": [
-				"bzz-raw://c97f80158905e20e0d14f2578cd76d20f8f9ff38a8446c9ee137c80622072d4f",
-				"dweb:/ipfs/QmcMXDBFEoLTbDghKmxTEyRCjzcosXS832Y3ctyxsvK2MT"
-			]
-		},
-		"test/Test.sol": {
-			"keccak256": "0x379584ad7692ea2601e09a94f5a26a8364e2e79fca83ee46e2a1f8a83afd90d0",
-			"license": "MIT",
-			"urls": [
-				"bzz-raw://acab115ccf3915cb3508714ec732feb073abcab015f709f6d38289df62e27032",
-				"dweb:/ipfs/QmVoKRHSwy9kCPmPz8sHduJbgnuBinGQ6dwCHFBkuf2Qg1"
 			]
 		}
 	},

@@ -2,7 +2,7 @@
 pragma solidity ^0.8.0;
 import "contracts/Leaf.sol";
 import "contracts/Tree.sol";
-import "contracts/BaseDeployer.sol";
+import "contracts/Seed.sol";
 
 // Simple contracts for testing div() function as leaf
 contract Divider {
@@ -18,7 +18,7 @@ contract Multiplier {
     }
 }
 
-contract TestDeployer is BaseDeployer {
+contract TestSeed is Seed {
     mapping(address => bool) public isAdmin;
     constructor(address[] memory admins) {
         for(uint256 i = 0; i < admins.length; i ++) isAdmin[admins[i]] = true;
@@ -30,9 +30,9 @@ contract TestDeployer is BaseDeployer {
 contract MockAdmin {
     address immutable creator;
     constructor() { creator = msg.sender; }
-    function doDeploy(BaseDeployer deployer, bytes4 selector, address implementation) external {
+    function doDeploy(Seed seed, bytes4 selector, address implementation) external {
         require(msg.sender == creator);
-        deployer.deploy(selector, implementation);
+        seed.deploy(selector, implementation);
     }
     function check() external pure returns (bool) { return true; }
 }
@@ -50,14 +50,14 @@ contract TreeTest {
         admins[0] = address(this);
         admins[1] = msg.sender;
         admins[2] = mockAdmin;
-        TestDeployer deployer = new TestDeployer(admins);
-        require(deployer.isAdmin(address(this)), "Not admin");
-        require(deployer.isAdmin(mockAdmin), "Not admin");
-        require(deployer.isAdmin(msg.sender), "Not admin");
+        TestSeed seed = new TestSeed(admins);
+        require(seed.isAdmin(address(this)), "Not admin");
+        require(seed.isAdmin(mockAdmin), "Not admin");
+        require(seed.isAdmin(msg.sender), "Not admin");
         debug = Divider.div.selector;
-        deployer.deploy(Divider.div.selector, divider);
-        MockAdmin(mockAdmin).doDeploy(deployer, Multiplier.mul.selector, multiplier);
-        address tree = address(new Tree(address(deployer)));
+        seed.deploy(Divider.div.selector, divider);
+        MockAdmin(mockAdmin).doDeploy(seed, Multiplier.mul.selector, multiplier);
+        address tree = address(new Tree(address(seed)));
         uint256 divided = Divider(tree).div(20, 4);
         require(divided == 5, "Uh oh");
         uint256 multiplied = Multiplier(tree).mul(20, 4);

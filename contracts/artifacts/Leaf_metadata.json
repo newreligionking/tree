@@ -38,20 +38,20 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/BaseDeployer.sol": {
-			"keccak256": "0x416bfcbc2aee498882f6d7c94aa8beca8c5b4c87e44c00e52e21e63f87523510",
+		"contracts/Leaf.sol": {
+			"keccak256": "0x58bd0d7196a7c202b3afbbc6d9a638d913c047d0c63473cecc760d61f51e938e",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://5a78558a23a53a8ccc5963b7b0486d44577706d38f41b2b5a4aa13f3022c5a0e",
-				"dweb:/ipfs/QmW9KqEhAagZUwN3SXCcSqw13UmQ81iYSMzHvAisLy512J"
+				"bzz-raw://1f339043154e7c7b7cbf8329121ada21a46c22b7d7c8efc31ac42dc7e1cff5eb",
+				"dweb:/ipfs/QmYxqt2AFFDX4hQjMUJLoqrhPcx2LswaELkGxnPZo5nESy"
 			]
 		},
-		"contracts/Leaf.sol": {
-			"keccak256": "0x9baf0258f0ebc5ed6d5dbdf1bb7a8e08922726edcf38c74c8e8fc92909bb51e6",
+		"contracts/Seed.sol": {
+			"keccak256": "0x1755d0260b5814ca6fc4aaa25924f25595c8f3708112218a5dee247f5cff6aef",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://c6d38d815e428d10663e09d675636c6d82ecb12a7f05f76e4b4fc43f6b3ac2ca",
-				"dweb:/ipfs/QmYpbibvoySQv2J4SPyrN5zD8HA3sp9tmSvW7fCKucCgt5"
+				"bzz-raw://bdaa111ec992824502edf439503188ff2c6918524010ccf9078ffae50064e8d7",
+				"dweb:/ipfs/QmY9bpeVtJaTGW1rnmCBfd385kRousGaeLX6QfUbehrN59"
 			]
 		}
 	},

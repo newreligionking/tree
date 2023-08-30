@@ -5,11 +5,11 @@ import { Leaf } from "contracts/Leaf.sol";
 
 contract Tree {
     bytes32 constant leafCodeHash = keccak256(type(Leaf).creationCode);
-    address immutable deployer;
-    constructor(address d) { deployer = d; }
+    address immutable seed;
+    constructor(address s) { seed = s; }
     fallback(bytes calldata) external payable returns (bytes memory) {
         bytes4 selector = msg.sig;
-        address target = c2a(bytes32(selector), leafCodeHash, deployer);
+        address target = c2a(bytes32(selector), leafCodeHash, seed);
         (bool success, bytes memory output) = target.delegatecall(msg.data);
         if (success) return output;
         revert(string(output));

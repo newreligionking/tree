@@ -3,7 +3,7 @@ pragma solidity ^0.8.0;
 
 import { Leaf } from "contracts/Leaf.sol";
 
-abstract contract BaseDeployer {
+abstract contract Seed {
     address public implementation;
     event NewLeaf(bytes4 indexed selector, address indexed implementation);
     function deploy(bytes4 selector, address _implementation) external payable returns (address deployed) {
