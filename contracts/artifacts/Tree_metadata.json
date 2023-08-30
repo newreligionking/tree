@@ -1,0 +1,77 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "d",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "fallback"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Tree.sol": "Tree"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/BaseDeployer.sol": {
+			"keccak256": "0xd72ccfebd97527183cdb80e7a282725ded9d5213e5703c5ba07f2483ebd88a24",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://27967e89c42acd91fd327effe09bf3850983eb6d87b264057e1d2737f1a0e4c1",
+				"dweb:/ipfs/QmXjuqTwUB5JCcBthi4Lc8Qr5G63k5dUwfBs6EdCNsJpTP"
+			]
+		},
+		"contracts/Leaf.sol": {
+			"keccak256": "0x9baf0258f0ebc5ed6d5dbdf1bb7a8e08922726edcf38c74c8e8fc92909bb51e6",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c6d38d815e428d10663e09d675636c6d82ecb12a7f05f76e4b4fc43f6b3ac2ca",
+				"dweb:/ipfs/QmYpbibvoySQv2J4SPyrN5zD8HA3sp9tmSvW7fCKucCgt5"
+			]
+		},
+		"contracts/Tree.sol": {
+			"keccak256": "0xe56d7a736238025b3320ea8e85a53458be37c057ad2e535cbb7dea6763193a54",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://bdae53193ca7fbd1c2ad37a03774c438acf8e2039ba46a55fef64fba5714386e",
+				"dweb:/ipfs/QmYcaiThBkhQWYX3zix4x4d7LV3LVxzJ4AFjHjepXXjJvw"
+			]
+		}
+	},
+	"version": 1
+}

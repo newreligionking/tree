@@ -1,0 +1,110 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "bytes4",
+						"name": "selector",
+						"type": "bytes4"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "implementation",
+						"type": "address"
+					}
+				],
+				"name": "NewLeaf",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes4",
+						"name": "selector",
+						"type": "bytes4"
+					},
+					{
+						"internalType": "address",
+						"name": "_implementation",
+						"type": "address"
+					}
+				],
+				"name": "deploy",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "deployed",
+						"type": "address"
+					}
+				],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "implementation",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/BaseDeployer.sol": "BaseDeployer"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/BaseDeployer.sol": {
+			"keccak256": "0xd72ccfebd97527183cdb80e7a282725ded9d5213e5703c5ba07f2483ebd88a24",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://27967e89c42acd91fd327effe09bf3850983eb6d87b264057e1d2737f1a0e4c1",
+				"dweb:/ipfs/QmXjuqTwUB5JCcBthi4Lc8Qr5G63k5dUwfBs6EdCNsJpTP"
+			]
+		},
+		"contracts/Leaf.sol": {
+			"keccak256": "0x9baf0258f0ebc5ed6d5dbdf1bb7a8e08922726edcf38c74c8e8fc92909bb51e6",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c6d38d815e428d10663e09d675636c6d82ecb12a7f05f76e4b4fc43f6b3ac2ca",
+				"dweb:/ipfs/QmYpbibvoySQv2J4SPyrN5zD8HA3sp9tmSvW7fCKucCgt5"
+			]
+		}
+	},
+	"version": 1
+}

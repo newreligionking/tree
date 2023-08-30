@@ -1,0 +1,59 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "payable",
+				"type": "constructor"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Leaf.sol": "Leaf"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/BaseDeployer.sol": {
+			"keccak256": "0x416bfcbc2aee498882f6d7c94aa8beca8c5b4c87e44c00e52e21e63f87523510",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5a78558a23a53a8ccc5963b7b0486d44577706d38f41b2b5a4aa13f3022c5a0e",
+				"dweb:/ipfs/QmW9KqEhAagZUwN3SXCcSqw13UmQ81iYSMzHvAisLy512J"
+			]
+		},
+		"contracts/Leaf.sol": {
+			"keccak256": "0x9baf0258f0ebc5ed6d5dbdf1bb7a8e08922726edcf38c74c8e8fc92909bb51e6",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c6d38d815e428d10663e09d675636c6d82ecb12a7f05f76e4b4fc43f6b3ac2ca",
+				"dweb:/ipfs/QmYpbibvoySQv2J4SPyrN5zD8HA3sp9tmSvW7fCKucCgt5"
+			]
+		}
+	},
+	"version": 1
+}
